@@ -1,0 +1,437 @@
+<!-- Submitted by: James Lee -->
+<!--      College: Seminole State College of Florida -->
+<!--       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) -->
+<!--   Instructor: Professor Rosario -->
+<!--         Date: December 3, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kissimmee :: Main Street</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Kissimmee history from 1883 to present. 
+		Special focus on Pioneer Village, Lakefront Park, and Downtown Kissimmee."
+    />
+    <meta
+      name="keywords"
+      content="kissimmee, pioneer day, pioneer village, lakefront,
+		public parks, downtown kissimmee, murals, sculpture"
+    />
+    <link rel="preload" as="image" href="images-ready/MainStreetBanner.jpg" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/carousel.css" rel="stylesheet" />
+    <link href="styles/cycle2-demo-slideshow.css" rel="stylesheet" />
+    <link href="styles/rollover.css" rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="scripts/buttons.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css"
+      rel="stylesheet"
+    />
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".bxslider").bxSlider({
+          auto: true,
+          //autoControls: true,
+          autoHover: true,
+          pause: 3000,
+          mode: "fade",
+          captions: true,
+          minSlides: 1,
+          maxSlides: 3,
+          shrinkItems: true,
+          slideWidth: 420,
+          //slideMargin: 10,
+          moveSlides: 2,
+          //randomStart: true
+        });
+      });
+    </script>
+
+    <!-- <script src="https://malsup.github.io/jquery.cycle2.js"></script> -->
+    <!-- <script src="https://malsup.github.io/jquery.cycle2.tile.js"></script> -->
+    <script src="scripts/jquery.cycle2.min.js"></script>
+    <script src="scripts/jquery.cycle2.tile.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/rollover.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="images-ready/MainStreetBanner.jpg"
+          alt="Downtown Kissimmee"
+          class="img_responsive"
+        />
+      </header>
+      <nav id="navbar" style="z-index: 10">
+        <ul>
+          <li><a class="navbtn" href="index.html">Home</a></li>
+          <li><a class="navbtn" href="pioneer.html">Pioneer Day</a></li>
+          <li><a class="active" href="downtown.html">Main Street</a></li>
+          <!-- <li><a class="navbtn" href="vote.html">Your Vote</a></li> -->
+          <li><a class="navbtn" href="lakefront.html">Lakefront Park</a></li>
+          <li><a class="navbtn" href="quiz.html">Quiz</a></li>
+          <li><a class="navbtn lastitem" href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+
+      <div id="fxbox">
+        <main>
+          <ul class="breadcrumb" style="text-align: left">
+            <li><a href="index.html">Home</a></li>
+            <li>Main Street</li>
+            <!--
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Pioneer Day</a></li>
+					<li><a href="#">Main Street</a></li>
+					<li><a href="#">Lakefront Park</a></li>
+					<li><a href="#">Quiz</a></li>
+					<li><a href="#">Glossary</a></li>
+					<li>You Are Here</li>
+					-->
+          </ul>
+          <section>
+            <h2>Main Street and Downtown Kissimmee</h2>
+
+            <article>
+              <h4>Downtown Kissimmee Murals</h4>
+              <p>
+                Osceola Arts sponsors a program called ARTisNOW, a public mural
+                project. Their mission is to create a collaboration between
+                local mural artists and community leaders to transform the
+                downtown Kissimmee area with colorful, vibrant murals. You can
+                view these murals all along Broadway and its side streets. In
+                2021, they are expanding the program to include the area from
+                downtown to the Vine Street Corridor.
+              </p>
+
+              <div class="rollover">
+                <h1>Instructions:</h1>
+                <p>
+                  Move your mouse over and out of any image below to toggle
+                  between the original image and an alternate.
+                </p>
+                <ul id="image_rollovers">
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_2acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_2bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    The name of this mural is Toho Sunset by Willie Soto. It
+                    definitely captures the essence of walking along Lake Toho
+                    at sunset. You can find this mural at 421 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_3acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_3bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    The title of this mural is Florida Panther. The artist is
+                    Ryan Semple. You can view it at 420 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_4acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_4bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    The title and owner of this mural is Kissimmee by Ric One.
+                    You can find it at 131 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_5acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_5bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This is Snowy Egret by SLEDS. You can find it at 108
+                    Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_6acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_6bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This is American Eagle by Ermes Art. You can find it at 15
+                    West Darling.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_7acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_7bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    The title of this mural is Cosmic Owl by German Lemus. You
+                    can find it at 8 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_8acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_8bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    The title of this mural is Iron Horse. The artist is C.
+                    Stanley Creative. You can view it at 16 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_9acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_9bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This is Bengal Tiger by Nicole Holderbaum. You can view it
+                    at 106 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_10acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_10bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This one is called The Wild Ones by Steven Teller. You can
+                    find it at 120 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_11acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_11bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    The title of this mural is Exploding Kingfisher by
+                    Christopher Maslow. You can find it at 92 Pleasant Street.
+                  </p>
+                  <!--
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_12acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_12bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    I have no information about this mural, but I like the guy
+                    staring out the second story window.
+                  </p>
+                  -->
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_13acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_13bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This one is called Koi Fish by Ric One. You can find it at
+                    12 East Darlington.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/HardwareMural_1bcopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/HardwareMural_1acopya.jpg"
+                    />
+                  </li>
+                  <p>
+                    This is the Makinson Hardware mural by Tom Copella. It's
+                    located at 308 Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/mural_1acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/mural_1bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This mural can be found on the side of the private building
+                    at 407 Broadway. The building was once owned or leased by
+                    Art in Motion, LLC, but they no longer occupy the building.
+                    I have no other information. This mural stood out to me by
+                    the way the artist incorporated the actual door of the
+                    building into the mural.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/sculpture_4acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/sculpture_4bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    Downtown Kissimmee also offers a large collection of outdoor
+                    public sculptures. This one is called Angel of the Caribbean
+                    by Edmundo Lopez. You can find it in front of City Hall at
+                    101 Church Street, Kissimmee, FL 34741.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/sculpture_6acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/sculpture_6bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This is a permanent sculpture dedicated to Bette Sprinkle,
+                    the "First Lady of Osceola County". The artist is Sandra
+                    Storm.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/sculpture_11acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/sculpture_11bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This is Shuggah Momma with Shuggah Baby. Artist is unknown.
+                    It's located on the corner of Monument Ave and Broadway Ave.
+                  </p>
+                  <li>
+                    <img
+                      src="images-ready/MainStreet/founded1883_1acopy.jpg"
+                      alt=""
+                      id="images-ready/MainStreet/founded1883_1bcopy.jpg"
+                    />
+                  </li>
+                  <p>
+                    This is neither a mural or sculpture. It is actually the
+                    sign in front of City Hall and it signifies the end of our
+                    Downtown Kissimmee art review.
+                  </p>
+                </ul>
+              </div>
+            </article>
+            <br />
+            <p>
+              <img
+                style="border: 0; width: 88px; height: 31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!"
+              />
+            </p>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <!-- Artist’s last name, first name. Title of artwork. Year. Medium. 
+             Name of institution/private collection housing artwork, 
+             city where institution/private collection is located. -->
+        <em class="cite_apa7">All Photos by James Lee</em><br />
+        <p class="cite_apa7">
+          Soto, Willie. Toho Sunset. Painted Mural. Osceola Arts, 421 Broadway
+          Ave., Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Semple, Ryan. Florida Panther. Painted Mural. Osceola Arts, 420
+          Broadway Ave., Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          One, Ric. Kissimmee. Painted Mural. Osceola Arts, 131 Broadway Ave.,
+          Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Sleds. Snowy Egret. Painted Mural. Osceola Arts, 108 Broadway Ave.,
+          Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Art, Ermes. American Eagle. Painted Mural. Osceola Arts, 15 West
+          Darling Street, Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Lemus, German. Cosmic Owl. Painted Mural. Osceola Arts, 8 Broadway
+          Ave., Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Creative, C. Stanley. Iron Horse. Painted Mural. Osceola Arts, 16
+          Broadway Ave., Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Holderbaum, Nicole. Bengal Tiger. Painted Mural. Osceola Arts, 106
+          Broadway Ave., Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Teller, Steven. The Wild Ones. Painted Mural. Osceola Arts, 120
+          Broadway Ave., Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Maslow, Christopher. Exploding Kingfisher. Painted Mural. Osceola
+          Arts, 92 Pleasant Street, Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          One, Ric. Koi Fish. Painted Mural. Osceola Arts, 12 East Darlington,
+          Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Copella, Tom. Painted Mural. Makinson Hardware, 308 Broadway Ave.,
+          Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Unknown. Painted Mural. Osceola Arts, 407 Broadway Ave., Kissimmee, FL
+          34741
+        </p>
+        <p class="cite_apa7">
+          Lopez, Edmundo. Angel of the Caribbean. Sculpture. Osceola Arts, 101
+          Church Street, Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Storm, Sandra. Bette Sprinkle. Bronze Sculpture. Osceola Arts, 23
+          Broadway Ave., Kissimmee, FL 34741
+        </p>
+        <p class="cite_apa7">
+          Shuggah Momma with Shuggah Baby. Bronze Sculpture. Osceola Arts,
+          corner of Monument Ave. & Broadway Ave., Kissimmee, FL 34741
+        </p>
+        <br />
+        Copyright &copy; James Lee<br />
+        <a href="mailto:jlee176ss@live.seminolestate.edu"
+          >jlee176ss@live.seminolestate.edu</a
+        >
+      </footer>
+    </div>
+    <!-- End of Wrapper -->
+  </body>
+</html>

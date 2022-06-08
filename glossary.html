@@ -1,0 +1,304 @@
+<!-- Submitted by: James Lee -->
+<!--      College: Seminole State College of Florida -->
+<!--       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) -->
+<!--   Instructor: Professor Rosario -->
+<!--         Date: December 3, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Glossary</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Kissimmee history from 1883 to present. 
+		Special focus on Pioneer Village, Lakefront Park, and Downtown Kissimmee."
+    />
+    <meta
+      name="keywords"
+      content="kissimmee, pioneer day, pioneer village, lakefront,
+		public parks, downtown kissimmee, murals, sculpture"
+    />
+    <link rel="preload" as="image" href="images-ready/GlossaryBanner.jpg" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/glossary.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/buttons.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/glossary.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="images-ready/GlossaryBanner.jpg"
+          alt="Kissimmee Lakefront Park"
+          class="img_responsive"
+        />
+      </header>
+      <nav id="navbar" style="z-index: 10">
+        <ul>
+          <li><a class="navbtn" href="index.html">Home</a></li>
+          <li><a class="navbtn" href="pioneer.html">Pioneer Day</a></li>
+          <li><a class="navbtn" href="downtown.html">Main Street</a></li>
+          <!-- <li><a class="navbtn" href="vote.html">Your Vote</a></li> -->
+          <li><a class="navbtn" href="lakefront.html">Lakefront Park</a></li>
+          <li><a class="navbtn" href="quiz.html">Quiz</a></li>
+          <li><a class="active lastitem" href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Glossary</li>
+          <!--
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Pioneer Day</a></li>
+					<li><a href="#">Main Street</a></li>
+					<li><a href="#">Lakefront Park</a></li>
+					<li><a href="#">Quiz</a></li>
+					<li><a href="#">Glossary</a></li>
+					<li>You Are Here</li>
+					-->
+        </ul>
+        <section id="faqs">
+          <h1>jQuery Methods for Forms and Controls (Ruvalcaba and Delamater)</h1>
+          <h2><a href="#">val()</a></h2>
+          <div>
+            <p>
+              a jQuery method that is used with a $(“selector”). Without
+              specifying an argument, val() will retrieve the value of a form
+              element, such as a text box, and set it to the associated declared
+              variable. If you specify an argument, such as val(“Hello World”),
+              the text will be set for the form element referenced by the
+              selector.
+            </p>
+          </div>
+
+          <h2><a href="#">text()</a></h2>
+          <div>
+            <p>
+              is similar to val() except it sets and gets the inner content of
+              regular elements (not form elements). It is also similar to
+              html(), but text() performs a literal translation of the text
+              including HTML tags.
+            </p>
+          </div>
+          <h2><a href="#">next()</a></h2>
+          <div>
+            <p>
+              is a jQuery traversing method used to reference the next sibling
+              of the selector reference $(“selector”). It can also reference the
+              first sibling of a particular element if an argument is specified
+              and that element type immediately follows the selector reference,
+              ex. $(“div”).next(“p”). This example will reference the first p
+              element that immediately follows a div block.
+            </p>
+          </div>
+          <h2><a href="#">submit()</a></h2>
+          <div>
+            <p>
+              is used to initiate the processing of a form, as referenced by the
+              selector, by submitting the data to the server.
+            </p>
+          </div>
+          <h2><a href="#">focus()</a></h2>
+          <div>
+            <p>
+              is used to set the focus to a form control or link referenced by
+              the selector.
+            </p>
+          </div>
+
+          <br />
+          <h1>General Purpose jQuery Methods (Ruvalcaba and Delamater)</h1>
+          <h2><a href="#">prev()</a></h2>
+          <div>
+            <p>
+              a jQuery traversing method similar to next(), but it provides a
+              reference to the previous sibling element to the selector
+              reference. If an argument element type is specified, then the
+              previous element of the argument type is referenced as long as it
+              precedes the selector reference.
+            </p>
+          </div>
+          <h2><a href="#">find(<em>filter</em>)</a></h2>
+          <div>
+            <p>
+              is a jQuery traversing method, used to reference a descendant
+              element of the selector element. The descendant element is
+              specified by the required argument of the find() method (“JQuery
+              Traversing Methods”).
+            </p>
+          </div>
+          <h2><a href="#">attr()</a></h2>
+          <div>
+            <p>
+              is a jQuery method for setting or getting HTML and CSS attribute
+              values of the selected element. There are several overloaded
+              versions: get or set a single attribute value or multiple
+              attributes and values.
+            </p>
+          </div>
+          <h2><a href="#">css()</a></h2>
+          <div>
+            <p>
+              is a jQuery method for setting or getting CSS style properties of
+              the selector element. The applied CSS is specified by the
+              arguments of the css() method. The first argument specifies the
+              CSS property name and the second argument specifies the CSS
+              property value.
+            </p>
+          </div>
+          <h2><a href="#">addClass()</a></h2>
+          <div>
+            <p>
+              is a jQuery method for adding one or more class names to a
+              selected element. You must specify one parameter for this method:
+              the class selector name. As a best practice, it's better to use
+              class selectors to apply styles as opposed to utilizing the css()
+              method multiple times.
+            </p>
+          </div>
+          <h2><a href="#">removeClass()</a></h2>
+          <div>
+            <p>
+              is a jQuery method for removing one or more class names from the
+              selected element.
+            </p>
+          </div>
+          <h2><a href="#">toggleClass()</a></h2>
+          <div>
+            <p>
+              provides a means to toggle on and off one or more class names for
+              the selected element.
+            </p>
+          </div>
+          <h2><a href="#">html()</a></h2>
+          <div>
+            <p>
+              is used to set or get the innerHTML of the selected element.
+              Unlike text(), this method will translate HTML tags.
+            </p>
+          </div>
+          <h2><a href="#">hide()</a></h2>
+          <div>
+            <p>
+              is a jQuery “effects” method. It is used to hide (that is, make
+              disappear) the selected element. Various arguments allow you to
+              specify the speed and transition for the vanishing element.
+            </p>
+          </div>
+          <h2><a href="#">show()</a></h2>
+          <div>
+            <p>
+              is the opposite of hide(). It is used to reveal the selected
+              element that was previously hidden.
+            </p>
+          </div>
+          <h2><a href="#">each(<em>function</em>)</a></h2>
+          <div>
+            <p>
+              is a jQuery traversing method, used to apply a function to each
+              element in the array of selected elements. The function is
+              required (“JQuery Traversing Methods”).
+            </p>
+          </div>
+
+          <br />
+          <h1>jQuery Event Methods (Ruvalcaba and Delamater)</h1>
+          <h2><a href="#">ready()</a></h2>
+          <div>
+            <p>
+              is a jQuery event method, used to load any JavaScript after the
+              DOM has been loaded. This safeguards any JavaScript from executing
+              before the DOM is created.
+            </p>
+          </div>
+          <h2><a href="#">click()</a></h2>
+          <div>
+            <p>
+              triggers the click event or attaches a JavaScript function to the
+              click event on the selected element.
+            </p>
+          </div>
+          <h2><a href="#">mouseover()</a></h2>
+          <div>
+            <p>
+              attaches a trigger and callback function to the mouseover event
+              for the selected element. The function is also applied to any of
+              the selected element’s children (“JQuery Event Methods”).
+            </p>
+          </div>
+          <h2><a href="#">hover()</a></h2>
+          <div>
+            <p>
+              attaches a trigger and callback function to the mouseenter and
+              mouseleave events for the selected element. If only one function
+              is specified, then the same function is executed for both events
+              (“JQuery Event Methods”).
+            </p>
+          </div>
+
+          <br />
+          <h1>jQuery Effect Methods (Ruvalcaba and Delamater)</h1>
+          <h2>
+            <a href="#">animate(<em>{styles},speed,easing,callback</em>)</a>
+          </h2>
+          <div>
+            <p>morphs or animates the numeric CSS properties of an element.</p>
+          </div>
+          <h2>
+            <a href="#">delay(<em>duration in ms</em>)</a>
+          </h2>
+          <div>
+            <p>
+              delays or pauses the execution of subsequent jQuery effects or
+              animations following the dot notation order. Example:
+              $("#idSelector").slideUp(1000).delay(500).fadeIn(200);
+            </p>
+          </div>
+          <h2><a href="#">stop()</a></h2>
+          <div>
+            <p>immediately terminates a jQuery animation or effect.</p>
+          </div>
+          <h2><a href="#">finish()</a></h2>
+          <div>
+            <p>
+              immediately terminates a jQuery animation or effect and sets the
+              CSS properties to their target vales. All queued animations are
+              also terminated.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <em class="cite_apa7">All Photos by James Lee</em><br />
+        <p class="cite_apa7">
+          Ruvalcaba, Zak, and Mary Delamater. “Get Off to a Fast Start with
+          jQuery.” Murach’s JavaScript and JQuery (3rd Edition), 3rd ed., Mike
+          Murach & Associates, 2017, pp. 226-58.
+        </p>
+        <br />
+        Copyright &copy; James Lee<br />
+        <a href="mailto:jlee176ss@live.seminolestate.edu"
+          >jlee176ss@live.seminolestate.edu</a
+        >
+      </footer>
+    </div>
+    <!-- End of Wrapper -->
+  </body>
+</html>

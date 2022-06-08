@@ -1,0 +1,286 @@
+<!-- Submitted by: James Lee -->
+<!--      College: Seminole State College of Florida -->
+<!--       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) -->
+<!--   Instructor: Professor Rosario -->
+<!--         Date: December 3, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kissimmee :: Lakefront Park</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Kissimmee history from 1883 to present. 
+		Special focus on Pioneer Village, Lakefront Park, and Downtown Kissimmee."
+    />
+    <meta
+      name="keywords"
+      content="kissimmee, pioneer day, pioneer village, lakefront,
+		public parks, downtown kissimmee, murals, sculpture"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images-ready/LakefrontParkLighthouseCopy.jpg"
+    />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/lakefront.css" rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="scripts/buttons.js"></script>
+    <script src="scripts/lakefront.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="images-ready/LakefrontParkLighthouseCopy.jpg"
+          alt="Kissimmee Lakefront Park"
+          class="img_responsive"
+        />
+      </header>
+      <nav id="navbar" style="z-index: 10">
+        <ul>
+          <li><a class="navbtn" href="index.html">Home</a></li>
+          <li><a class="navbtn" href="pioneer.html">Pioneer Day</a></li>
+          <li><a class="navbtn" href="downtown.html">Main Street</a></li>
+          <!-- <li><a class="navbtn" href="vote.html">Your Vote</a></li> -->
+          <li><a class="active" href="lakefront.html">Lakefront Park</a></li>
+          <li><a class="navbtn" href="quiz.html">Quiz</a></li>
+          <li><a class="navbtn lastitem" href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+
+      <div id="fxbox">
+        <main>
+          <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Lakefront Park</li>
+            <!--
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Pioneer Day</a></li>
+					<li><a href="#">Main Street</a></li>
+					<li><a href="#">Lakefront Park</a></li>
+					<li><a href="#">Quiz</a></li>
+					<li><a href="#">Glossary</a></li>
+					<li>You Are Here</li>
+					-->
+          </ul>
+          <section>
+            <h2>Lakefront Park and Lake Toho</h2>
+            <br />
+
+            <article>
+              <h4>About...</h4>
+              <br />
+              <p>
+                On the northern shore of Lake Toho is Kissimmee’s Lakefront Park
+                (201 Lakeview Drive, Kissimmee, FL 34741 ), a large waterfront
+                park with walking paths, fishing pier, elaborate playgrounds,
+                marina, and several picnic pavilions. Lakefront Park is worth a
+                visit, especially on a weekend when its hosting a festival that
+                might be of interest to you.
+              </p>
+              <br />
+
+              <div class="myslider">
+                <!--Main H1 Element-->
+                <img
+                  id="image"
+                  src="images-ready/Lakefront/LakefrontParkLighthouse2.jpg"
+                  alt="Lakefront Park Lighthouse"
+                />
+                <!--Main Image-->
+                <div id="carousel">
+                  <div id="left_button" class="button_panel">
+                    <img src="images-ready/Lakefront/left.jpg" alt="" />
+                  </div>
+                  <!--Left Carousel Button-->
+                  <div id="display_panel">
+                    <ul id="image_list">
+                      <!--Unordered List of Lakefront Park Images-->
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/LakefrontParkLighthouse2.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontParkLighthouse2.jpg"
+                            alt="Lighthouse"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/LakefrontBird2copy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontBird2copy.jpg"
+                            alt="Bird"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/LakefrontBirdcopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontBirdcopy.jpg"
+                            alt="Bird"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/LakefrontMarinacopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontMarinacopy.jpg"
+                            alt="Marina"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/LakefrontDockscopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontDockscopy.jpg"
+                            alt="Marina Docks"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/LakefrontPlaygroundcopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontPlaygroundcopy.jpg"
+                            alt="Children's Playground"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/LakefrontSplashAreacopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontSplashAreacopy.jpg"
+                            alt="Splash Area"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/LakefrontRainGardencopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/LakefrontRainGardencopy.jpg"
+                            alt="Rain Garden"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/OrlandoJapanFestivalcopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/OrlandoJapanFestivalcopy.jpg"
+                            alt="Orlando Japan Festival"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/OrlandoJapanFest2copy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/OrlandoJapanFest2copy.jpg"
+                            alt="Orlando Japan Festival"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/OrlandoJapanFestCrowdcopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/OrlandoJapanFestCrowdcopy.jpg"
+                            alt="Orlandl Japan Festival"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/vetmemorial.jpg"
+                          ><img
+                            src="images-ready/Lakefront/vetmemorial.jpg"
+                            alt="Vet Memorial"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/monument1.jpg"
+                          ><img
+                            src="images-ready/Lakefront/monument1.jpg"
+                            alt="Monument of States 1"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/monument2.jpg"
+                          ><img
+                            src="images-ready/Lakefront/monument2.jpg"
+                            alt="Monument of States 2"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/monument3.jpg"
+                          ><img
+                            src="images-ready/Lakefront/monument3.jpg"
+                            alt="Monument of States 3"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="images-ready/Lakefront/monument4.jpg"
+                          ><img
+                            src="images-ready/Lakefront/monument4.jpg"
+                            alt="Monument of States 4"
+                        /></a>
+                      </li>
+                      <li>
+                        <a
+                          href="images-ready/Lakefront/Seal_of_Kissimmeecopy.jpg"
+                          ><img
+                            src="images-ready/Lakefront/Seal_of_Kissimmeecopy.jpg"
+                            alt="Seal of Kissimmee"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="right_button" class="button_panel">
+                    <img src="images-ready/Lakefront/right.jpg" alt="" />
+                  </div>
+                  <!--Right Carousel Button-->
+                </div>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <em class="cite_apa7">All Photos by James Lee</em><br />
+
+        <p class="cite_apa7">
+          Wikipedia contributors. "Monument of States." <em>Wikipedia, The Free
+          Encyclopedia.</em> Wikipedia, The Free Encyclopedia, 31 Mar. 2021. Web. 30
+          Nov. 2021.
+        </p>
+
+        <p class="cite_apa7">
+          City Seal of Kissimmee, Public domain, via Wikimedia Commons, 2008.
+          Accessed on November 30, 2021 from:
+          <a
+            style="color: inherit"
+            href="https://commons.wikimedia.org/wiki/File:Seal_of_Kissimmee,_Florida.png"
+            target="_blank"
+            title="Seal of Kissimmee"
+            >https://commons.wikimedia.org/wiki/File:Seal_of_Kissimmee,_Florida.png</a
+          >
+        </p>
+        <br />
+        Copyright &copy; James Lee<br />
+        <a href="mailto:jlee176ss@live.seminolestate.edu"
+          >jlee176ss@live.seminolestate.edu</a
+        >
+      </footer>
+    </div>
+    <!-- End of Wrapper -->
+  </body>
+</html>

@@ -1,0 +1,343 @@
+<!-- Submitted by: James Lee -->
+<!--      College: Seminole State College of Florida -->
+<!--       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) -->
+<!--   Instructor: Professor Rosario -->
+<!--         Date: December 3, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kissimmee :: Quiz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Kissimmee history from 1883 to present. 
+		Special focus on Pioneer Village, Lakefront Park, and Downtown Kissimmee."
+    />
+    <meta
+      name="keywords"
+      content="kissimmee, pioneer day, pioneer village, lakefront,
+		public parks, downtown kissimmee, murals, sculpture"
+    />
+    <link rel="preload" as="image" href="images-ready/QuizBanner.jpg" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/quiz.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/jquery-ui.min.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/buttons.js"></script>
+    <script src="scripts/quiz.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          class="img_responsive"
+          id="play_clip"
+          src="images-ready/QuizBanner.jpg"
+          alt="Quiz Banner Image"
+        />
+      </header>
+      <nav id="navbar" style="z-index: 10">
+        <ul>
+          <li><a class="navbtn" href="index.html">Home</a></li>
+          <li><a class="navbtn" href="pioneer.html">Pioneer Day</a></li>
+          <li><a class="navbtn" href="downtown.html">Main Street</a></li>
+          <!-- <li><a class="navbtn" href="vote.html">Your Vote</a></li> -->
+          <li><a class="navbtn" href="lakefront.html">Lakefront Park</a></li>
+          <li><a class="active" href="quiz.html">Quiz</a></li>
+          <li><a class="navbtn lastitem" href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Quiz</li>
+          <!--
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Pioneer Day</a></li>
+					<li><a href="#">Main Street</a></li>
+					<li><a href="#">Lakefront Park</a></li>
+					<li><a href="#">Quiz</a></li>
+					<li><a href="#">Glossary</a></li>
+					<li>You Are Here</li>
+					-->
+        </ul>
+        <section>
+          <br />
+          <h1>Quiz Time</h1>
+          <br />
+
+          <audio id="mp3_music">
+            <source src="audio/BrushyFork.mp3" type="audio/mpeg" />
+          </audio>
+
+          <p>
+            Here's a little quiz to test your knowledge of Kissimmee. You have 5
+            minutes to complete the quiz. This is just for fun.
+          </p>
+          <br />
+          <p>
+            As a minimum, I kindly ask that you fill-in your name and select a
+            date for your future visit to Kissimmee so that I may demonstrate my
+            data validation prowess and application of a jQuery UI Datepicker
+            widget.
+          </p>
+          <br />
+          <p>If you leave this page, you will have to restart the quiz.</p>
+          <br />
+          <p>Good luck!</p>
+          <br />
+
+          <button id="btn1" type="button">Click Here To Start Quiz</button>
+          <br /><br />
+
+          <div class="showform newWrapper" style="display: none">
+            <br />
+            <p>Time Remaining: <span id="quiz_timer"></span></p>
+            <br />
+
+            <!-- Quiz Form begins here -->
+            <!-- <form id="quiz_form" name="quiz_form" action="grade_quiz.html"> -->
+
+            <form id="quiz_form">
+              <label for="userName">Name:</label>
+              <input
+                style="display: inline"
+                type="text"
+                id="userName"
+                name="userName"
+              />
+              <span id="name1">*</span><br />
+
+              <label for="visit_date">Date of Future Visit:</label>
+              <input type="text" name="visit_date" id="visit_date" />
+              <span id="visit1">*</span><br />
+
+              <label>&nbsp;</label>
+
+              <p>
+                Question 1. What modern technology was incorporated into the
+                Makinson Hardware mural?
+              </p>
+              <br />
+              <input type="radio" id="car" name="mural" value="sports car" />
+              <label for="car">sports car</label>
+              <span id="question1-1">&nbsp;</span><br />
+
+              <input
+                type="radio"
+                id="antenna"
+                name="mural"
+                value="TV antenna"
+              />
+              <label for="antenna">TV antenna</label>
+              <span id="question1-2">&nbsp;</span><br />
+
+              <input
+                type="radio"
+                id="ac"
+                name="mural"
+                value="air conditioner"
+              />
+              <label for="ac">air conditioner</label>
+              <span id="question1-3">&nbsp;</span><br />
+
+              <input type="radio" id="drone" name="mural" value="drone" />
+              <label for="drone">drone</label>
+              <span id="question1-4">&nbsp;</span><br />
+
+              <label>&nbsp;</label>
+
+              <p>
+                Question 2. What is the literal Native American translation for
+                Kissimmee?
+              </p>
+              <br />
+              <input
+                type="radio"
+                id="trouble"
+                name="kissimmee"
+                value="trouble water"
+              />
+              <label for="trouble">trouble water</label>
+              <span id="question2-1">&nbsp;</span><br />
+
+              <input
+                type="radio"
+                id="long"
+                name="kissimmee"
+                value="long water"
+              />
+              <label for="long">long water</label>
+              <span id="question2-2">&nbsp;</span><br />
+
+              <input
+                type="radio"
+                id="sweet"
+                name="kissimmee"
+                value="sweet water"
+              />
+              <label for="sweet">sweet water</label>
+              <span id="question2-3">&nbsp;</span><br />
+
+              <input
+                type="radio"
+                id="unknown"
+                name="kissimmee"
+                value="origin unknown"
+              />
+              <label for="unknown">origin unknown</label>
+              <span id="question2-4">&nbsp;</span><br />
+
+              <label>&nbsp;</label>
+
+              <p>
+                Question 3. Select all the past items that have been associated
+                with Kissimmee?
+              </p>
+              <br />
+              <input
+                type="checkbox"
+                id="cattle"
+                name="cattle"
+                value="cattle/beef"
+              />
+              <label for="cattle">cattle</label>
+              <span id="question3a">&nbsp;</span><br />
+
+              <input
+                type="checkbox"
+                id="boats"
+                name="boats"
+                value="river boats"
+              />
+              <label for="boats">river boats</label>
+              <span id="question3b">&nbsp;</span><br />
+
+              <input type="checkbox" id="citrus" name="citrus" value="citrus" />
+              <label for="citrus">citrus</label>
+              <span id="question3c">&nbsp;</span><br />
+
+              <input
+                type="checkbox"
+                id="sugar"
+                name="sugar"
+                value="sugar cane"
+              />
+              <label for="sugar">sugar cane</label>
+              <span id="question3d">&nbsp;</span><br />
+
+              <input
+                type="checkbox"
+                id="tourism"
+                name="tourism"
+                value="tourism"
+              />
+              <label for="tourism">tourism</label>
+              <span id="question3e">&nbsp;</span><br />
+
+              <label>&nbsp;</label>
+
+              <p>
+                Question 4. What was the former name of Kissimmee? (hint: starts
+                with an 'A'.)
+              </p>
+              <br />
+              <div class="ui-widget">
+                <input
+                  style="display: inline"
+                  type="text"
+                  id="allendale"
+                  name="allendale"
+                  class="ui-autocomplete-input"
+                />
+                <span id="question4">&nbsp;</span>
+              </div>
+              <br />
+
+              <label>&nbsp;</label>
+
+              <p>
+                Question 5. You can travel by boat from Kissimmee to Lake
+                Okeechobee.
+              </p>
+              <br />
+              <input type="radio" id="truefact" name="locks" value="true" />
+              <label for="truefact">true</label>
+              <span id="question5-1">&nbsp;</span><br />
+              <input type="radio" id="falsefact" name="locks" value="false" />
+              <label for="falsefact">false</label>
+              <span id="question5-2">&nbsp;</span><br />
+
+              <label>&nbsp;</label>
+
+              <br /><br />
+              <button
+                id="grade_quiz"
+                style="width: 10em; text-align: center"
+                type="button"
+              >
+                Check Answers
+              </button>
+              <!-- <input
+                class="button"
+                style="width: 10em; text-align: center;"
+                type="button"
+                id="grade_quiz"
+                name="grade_quiz"
+                value="Check Answers"
+              /> -->
+              <input
+                class="button"
+                id="resetbtn"
+                style="width: 5em; text-align: center"
+                type="reset"
+                value="Reset"
+              />
+              <span id="final_grade">&nbsp;</span><br /><br />
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <em class="cite_apa7">All Photos by James Lee</em>
+        <br />
+
+        <p class="cite_apa7">
+          Black Twig Pickers. <em>Brushy Fork of Johns Creek.</em> MP3. Uploaded
+          on November 21, 2012.
+          <a
+            href="https://freemusicarchive.org/search?adv=1&quicksearch=brushy%20fork&&"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: inherit"
+            >https://freemusicarchive.org/...</a
+          >
+        </p>
+
+        <br />
+        Copyright &copy; James Lee<br />
+        <a href="mailto:jlee176ss@live.seminolestate.edu"
+          >jlee176ss@live.seminolestate.edu</a
+        >
+      </footer>
+    </div>
+    <!-- End of Wrapper -->
+  </body>
+</html>

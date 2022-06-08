@@ -1,0 +1,396 @@
+<!-- Submitted by: James Lee -->
+<!--      College: Seminole State College of Florida -->
+<!--       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) -->
+<!--   Instructor: Professor Rosario -->
+<!--         Date: December 3, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kissimmee :: Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="City of Kissimmee history from 1883 to present. 
+		Special focus on Pioneer Village, Lakefront Park, and Downtown Kissimmee."
+    />
+    <meta
+      name="keywords"
+      content="kissimmee, pioneer day, pioneer village, lakefront,
+		public parks, downtown kissimmee, murals, sculpture"
+    />
+    <link href="styles/cycle2-demo-slideshow.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link
+      rel="preload"
+      as="image"
+      href="images-ready/lakefront-1-pancopy.jpg"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="scripts/buttons.js"></script>
+    <script src="scripts/toggleSliders.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css"
+      rel="stylesheet"
+    />
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".bxslider").bxSlider({
+          auto: true,
+          //autoControls: true,
+          autoHover: true,
+          pause: 5000,
+          mode: "fade",
+          captions: true,
+          minSlides: 1,
+          maxSlides: 3,
+          shrinkItems: true,
+          slideWidth: 420,
+          //slideMargin: 10,
+          moveSlides: 2,
+          //randomStart: true
+        });
+      });
+    </script>
+
+    <script src="https://malsup.github.io/jquery.cycle2.js"></script>
+    <script src="https://malsup.github.io/jquery.cycle2.tile.js"></script>
+    <link href="styles/final_styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="images-ready/lakefront-1-pancopy.jpg"
+          alt="Kissimmee Lakefront Park"
+          class="img_responsive"
+        />
+      </header>
+      <nav id="navbar" style="z-index: 10">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="navbtn" href="pioneer.html">Pioneer Day</a></li>
+          <li><a class="navbtn" href="downtown.html">Main Street</a></li>
+          <!-- <li><a class="navbtn" href="vote.html">Your Vote</a></li> -->
+          <li><a class="navbtn" href="lakefront.html">Lakefront Park</a></li>
+          <li>
+            <a
+              class="navbtn"
+              href="quiz.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Quiz</a
+            >
+          </li>
+          <li><a class="navbtn lastitem" href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+
+      <div id="fxbox">
+        <main>
+          <ul class="breadcrumb">
+            <li>Home</li>
+            <!--
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Pioneer Day</a></li>
+					<li><a href="#">Main Street</a></li>
+					<li><a href="#">Lakefront Park</a></li>
+					<li><a href="#">Quiz</a></li>
+					<li><a href="#">Glossary</a></li>
+					<li>You Are Here</li>
+					-->
+          </ul>
+          <section>
+            <h2>Introduction</h2>
+
+            <article>
+              <h4>About...</h4>
+              <p>
+                Kissimmee, Florida is a city with a rich history and culture.
+                But outside of Central Florida, it is probably best known for
+                its “off-Disney” resort rates, cheap souvenirs, and Tourist
+                District (aka
+                <a
+                  href="https://myoldtownusa.com/"
+                  target="_blank"
+                  title="Go to Old Town website"
+                  >Old Town</a
+                >). But if you look closer, you’ll find a relatively small city
+                with its own identity beyond the “mouse ears”. This website is
+                about the city of Kissimmee, Florida, and a few of its offerings
+                for history buffs, street art enthusiasts, and small festival
+                event seekers.
+              </p>
+              <p>
+                As a first stop, I highly recommend the Osceola County Welcome
+                Center and History Museum (4155 W. Vine St. Kissimmee FL 34741).
+                The admission is free. See slideshow below. There are several
+                realistic dioramas that present the history of Kissimmee and its
+                timeline from the early citrus and cattle industries to a
+                thriving transportation hub and later as a tourist destination.
+              </p>
+              <p>
+                <strong><u>Slideshow Instructions:</u></strong> Hover your mouse
+                over the current image to pause the slideshow. Click this button
+                <button id="spbtn" type="button">Cycle 2</button> to view the
+                slideshow with a different jQuery slider plugin. The bxSlider
+                plugin offers informative slide captions and a pager control
+                whereas the Cycle 2 plugin offers a variety of individualized
+                slide transitions and full-frame images.
+              </p>
+              <br />
+
+              <div>
+                <div class="showBXslider">
+                  <div class="bxslider" style="z-index: 1">
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/WelcomeCenterOutside.jpg"
+                        alt="image"
+                        title="Osceola County Welcome Center & History Museum located at 4155 W. Vine St. Kissimmee FL 34741"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/MuseumShingleCreekPark.jpg"
+                        alt="image"
+                        title="Shingle Creek Regional Park & Trail...runs right behind the Welcome Center with separate 
+                        parking for added convenience."
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/OsceolaHistoryMuseum1copy.jpg"
+                        alt="image"
+                        title="Free admission to the History Museum!"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/OsceolaHistoryMuseum2copy.jpg"
+                        alt="image"
+                        title="Fascinating displays and life like dioramas!"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/RailroadCopy.jpg"
+                        alt="image"
+                        title="Learn about the history of Osceola County and Kissimmee."
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/MuseumGatorLarge.jpg"
+                        alt="image"
+                        title="It wouldn't be Florida without a live aligator habitat."
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/MuseumGatorCloseup.jpg"
+                        alt="image"
+                        title="Too bad they have to grow up!"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/Timelinecopy.jpg"
+                        alt="image"
+                        title="After Disney's Magic Kingdom opened its doors in 1971, 
+                        Kissimmee decided to focus on tourism."
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="images-ready/HistoryMuseum/Seal_of_Kissimmeecopy.jpg"
+                        alt="image"
+                        title="Official City Seal of Kissimmee, FL"
+                      />
+                    </div>
+                  </div>
+                  <p id="pager"></p>
+                </div>
+
+                <div class="showC2slider" style="display: none">
+                  <div
+                    class="cycle-slideshow c2-wrapper"
+                    style="z-index: 1; max-width: 420px"
+                    data-cycle-timeout="4200"
+                    data-cycle-next="#next5"
+                    data-cycle-prev="#prev5"
+                    data-cycle-pause-on-hover="true"
+                    data-cycle-fx="fadeout"
+                  >
+                    <img
+                      src="images-ready/HistoryMuseum/WelcomeCenterOutside.jpg"
+                      alt="image"
+                      data-cycle-fx="tileBlind"
+                      data-cycle-tile-vertical="false"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/MuseumShingleCreekPark.jpg"
+                      alt="image"
+                      data-cycle-fx="tileSlide"
+                      data-cycle-tile-vertical="false"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/OsceolaHistoryMuseum1copy.jpg"
+                      alt="image"
+                      data-cycle-fx="tileSlide"
+                      data-cycle-tile-vertical="true"
+                      data-cycle-tile-count="12"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/OsceolaHistoryMuseum2copy.jpg"
+                      alt="image"
+                      data-cycle-fx="tileSlide"
+                      data-cycle-tile-count="4"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/RailroadCopy.jpg"
+                      alt="image"
+                      data-cycle-fx="tileSlide"
+                      data-cycle-tile-count="1"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/MuseumGatorLarge.jpg"
+                      alt="image"
+                      data-cycle-fx="tileSlide"
+                      data-cycle-tile-count="1"
+                      data-cycle-tile-vertical="false"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/MuseumGatorCloseup.jpg"
+                      alt="image"
+                      data-cycle-fx="fadeout"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/Timelinecopy.jpg"
+                      alt="image"
+                      data-cycle-fx="fadeout"
+                    />
+                    <img
+                      src="images-ready/HistoryMuseum/Seal_of_Kissimmeecopy.jpg"
+                      alt="image"
+                      data-cycle-fx="fadeout"
+                    />
+                  </div>
+                  <div style="text-align: center">
+                    <a href="#" id="prev5">&lt;&lt; Prev </a>
+                    <span class="title" style="text-shadow: none">
+                      &nbsp;&nbsp;Welcome Center & History Museum&nbsp;&nbsp;
+                    </span>
+                    <a href="#" id="next5"> Next >> </a>
+                  </div>
+                </div>
+              </div>
+              <h4>Fun Facts...</h4>
+              <p>
+                Kissimmee falls within Osceola County, south of Orlando. It has
+                a population of 71,185 (2019) with a 56.3% Democrat public. It
+                operates under a Council-Manager form of government where its
+                elected officials work alongside a business-oriented City
+                Manager who oversees the city’s various departments. (City
+                Government | City of Kissimmee, FL, n.d.)
+              </p>
+              <p>
+                The city name itself is believed to be a direct translation from
+                the Jororo tribal word “Cacema” which means “long water”. This
+                reference is to Lake Tohopekaliga (aka Lake Toho) which is the
+                largest lake in Osceola County. Lake Toho covers 22,700 acres
+                and has a circumference of 42 miles. The lake is popular for its
+                tournament bass fishing. Other fresh water fish found in Lake
+                Toho include Black crappie, Largemouth bass, Spotted bass,
+                Bluegill, and Walleye. (Granicus, n.d.)
+              </p>
+            </article>
+            <br />
+            <p>
+              <img
+                style="border: 0; width: 88px; height: 31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!"
+              />
+            </p>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <em class="cite_apa7">All Photos by James Lee</em><br />
+        <em class="cite_apa7"
+          >Permission to use images granted by the curator of the Osceola County
+          History Museum</em
+        >
+        <p class="cite_apa7">
+          Wikipedia contributors. "Lake Tohopekaliga."
+          <em>Wikipedia, The Free Encyclopedia.</em> Wikipedia, The Free
+          Encyclopedia, 22 Mar. 2021. Web. 30 Nov. 2021.
+        </p>
+        <p class="cite_apa7">
+          Osceola History. (2019). Cow and Horse Diorama. Wp.com.
+          https://i1.wp.com/osceolahistory.org/wp-content/uploads/2019/05/DSC_2295.jpg?w=1024&ssl=1
+        </p>
+        <p class="cite_apa7">
+          Osceola History. (2019). Deer and Turkey Diorama. Wp.com.
+          https://i0.wp.com/osceolahistory.org/wp-content/uploads/2019/05/DSC_2276-edited.jpg?w=1024&ssl=1
+        </p>
+        <p class="cite_apa7">
+          Timeline. Osceola County History Museum. Photo taken on October 30,
+          2021.
+        </p>
+        <p class="cite_apa7">
+          City Seal of Kissimmee, Public domain, via Wikimedia Commons, 2008.
+          Accessed on November 30, 2021 from:
+          <a
+            style="color: inherit"
+            href="https://commons.wikimedia.org/wiki/File:Seal_of_Kissimmee,_Florida.png"
+            target="_blank"
+            title="Seal of Kissimmee"
+            >https://commons.wikimedia.org/wiki/File:Seal_of_Kissimmee,_Florida.png</a
+          >
+        </p>
+        <p class="cite_apa7">
+          City Government | City of Kissimmee, FL. (n.d.). Www.kissimmee.gov.
+          Retrieved November 30, 2021, from:
+          <a
+            style="color: inherit"
+            href="https://www.kissimmee.gov/our-city/city-government"
+            target="_blank"
+            title="Kissimmee Gov Website"
+            >‌https://www.kissimmee.gov/our-city/city-government</a
+          >
+        </p>
+        <p class="cite_apa7">
+          Granicus. (n.d.). A Time Remembered | City of Kissimmee, FL.
+          Www.kissimmee.gov. Retrieved November 30, 2021, from:
+          <a
+            style="color: inherit"
+            href="https://www.kissimmee.gov/our-city/history-of-kissimmee/a-time-remembered"
+            target="_blank"
+            title="Kissimmee Gov Website (History)"
+            >https://www.kissimmee.gov/our-city/history-of-kissimmee/a-time-remembered</a
+          >
+        </p>
+        <br />
+        Copyright &copy; James Lee<br />
+        <a href="mailto:jlee176ss@live.seminolestate.edu"
+          >jlee176ss@live.seminolestate.edu</a
+        >
+      </footer>
+    </div>
+    <!-- End of Wrapper -->
+  </body>
+</html>

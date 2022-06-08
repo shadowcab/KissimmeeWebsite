@@ -1,0 +1,629 @@
+/* Submitted by: James Lee */
+/*      College: Seminole State College of Florida */
+/*       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) */
+/*   Instructor: Professor Rosario */
+/*         Date: December 3, 2021 */
+
+/* Browsers to include width and height of content, padding, and borders for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* The follow elements will display as block elements */
+header,
+main,
+nav,
+footer,
+section,
+article,
+img,
+figure,
+figcaption,
+aside {
+  display: block;
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  background-color: #045676;
+  /*    background-image: url(images/Treadmill_Med_Dark.jpg); */
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+
+#wrapper {
+  /*    background-color: #f0d3a9; */
+  background-color: #fcf6ee;
+  width: 100%;
+  margin: 0%;
+}
+
+header {
+  border-bottom: 0px solid #000000;
+  padding: 0%;
+  margin: 0%;
+}
+
+h1 {
+  margin: 0.5em 0em 0em 0em;
+  border-width: 0px;
+  background-clip: content-box;
+}
+
+.bx-wrapper {
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.c2-wrapper {
+  margin-bottom: 10px;
+  display: block;
+  /*  max-width: fit-content;*/
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 860px;
+  height: auto;
+  z-index: 1;
+}
+
+.ui-tooltip-content {
+  font-size: 16pt;
+}
+
+div.responsive img {
+  width: auto;
+  height: auto;
+  border-color: #fcf6ee;
+  background-color: #fcf6ee;
+  padding-inline: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+#pager {
+  text-align: center;
+  font-size: 90%;
+  color: blue;
+}
+
+.img_responsive {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.img_response_4 {
+  max-width: 90%;
+  min-height: 200px;
+  margin: auto;
+}
+
+.img_large_responsive {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+}
+
+/* Add the following class to figure container is you want zoom transform. */
+.img_zoom {
+  overflow: hidden;
+}
+
+.img_zoom img {
+  transition: transform 3s ease;
+}
+
+.img_zoom:hover img {
+  transform: scale(1.5);
+}
+
+/* Format the tag line under the main title */
+span {
+  font-size: 1em;
+  font-style: italic;
+  margin-top: 0px;
+  border-width: 0px;
+  text-shadow: 1px 1px #000000;
+}
+
+/* Begin nav and main elements */
+
+#fxbox {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+/*
+li {
+    border: 2px solid #00005D;
+    margin: 8px;
+    padding: 1px;
+    border-radius: 5px;
+}
+*/
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  background-color: #045676;
+  width: 100%;
+}
+
+#navbar ul {
+  list-style-type: none;
+  padding: 0.7em 0;
+  text-align: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 0;
+}
+
+#navbar ul li {
+  display: inline;
+  padding: 0 1.5em;
+}
+
+#navbar ul li a {
+  font-weight: bold;
+}
+
+#navbar ul li a.current {
+  text-decoration: none;
+}
+
+.navbtn {
+  /*    color: #1c0f78;*/
+  color: #eac086;
+}
+
+.active {
+  color: white;
+}
+
+.navbtn:hover {
+  text-decoration: underline overline wavy white;
+}
+
+/* Position the main column to the right of the nav column */
+main {
+  flex: 8;
+  padding: 10px 20px;
+}
+
+h2 {
+  font-family: arial, sans-serif;
+  font-size: 2.6vw;
+  margin-top: 20px;
+}
+
+h3,
+h4 {
+  text-align: left;
+}
+
+.noborder {
+  border: none;
+}
+
+article header {
+  background-image: none;
+  background-color: #afc8d6;
+  font-size: 90%;
+  padding-left: 0;
+  height: auto;
+}
+
+#image_rollovers {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+#image_rollovers li {
+  margin-bottom: 5px;
+}
+
+ul p {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+  font-size: larger;
+}
+
+figure {
+  text-align: center;
+  border: 1px solid #000000;
+  padding: 15px;
+  margin: 0px;
+}
+
+figcaption {
+  font-size: 90%;
+  font-style: italic;
+  text-align: center;
+  padding: 2px;
+  padding-top: 5px;
+}
+
+cite,
+.cite_apa7 {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.mlacite {
+  display: flex;
+  justify-content: center;
+}
+
+.image_row {
+  display: flex;
+  margin: 20px 0;
+}
+
+.pics_in_a_row > div:not(:last-child) {
+  margin-right: 2%;
+}
+
+/* Use aspect ratio of images to align height of pictures in same row. */
+.image_1 {
+  flex: calc(794 / 1223);
+  padding: 1%;
+  border: none;
+}
+
+.image_2 {
+  flex: calc(742 / 1115);
+  padding: 1%;
+  border: none;
+}
+
+.image_3 {
+  flex: calc(3300 / 5100);
+  padding: 1%;
+  border: none;
+}
+
+.image_4 {
+  flex: calc(1052 / 943);
+  padding: 1%;
+  border: none;
+}
+
+.image_5 {
+  flex: calc(1243 / 800);
+  padding: 1%;
+  border: none;
+}
+
+.image_6 {
+  flex: calc(1274 / 710);
+  padding: 1%;
+  border: none;
+}
+
+footer {
+  font-size: 90%;
+  text-align: center;
+  clear: right;
+  padding: 2em;
+  background-color: #045676;
+  color: #ffffff;
+  border-top: 1px solid #25354f;
+}
+
+code {
+  background: #eeeeee;
+  padding: 2px 5px;
+  font-size: 1.2em;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+ul.breadcrumb {
+  padding: 2px 0px;
+  list-style: none;
+  margin: 4px 0px 8px 0px;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 12px;
+  font-style: italic;
+  border: none;
+  margin: 0;
+}
+
+ul.breadcrumb li + li:before {
+  color: black;
+  content: ">\00a0";
+}
+
+ul.breadcrumb li a {
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+/* Make a 3-column Flexbox inside main */
+.flex3col {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+.flex3col > div {
+  flex: calc(1 / 3);
+  order: 1;
+  border: 2px solid #000000;
+  margin: 2px;
+}
+
+.indent5p {
+  margin: 5%;
+}
+
+fieldset {
+  padding: 2em;
+  margin: 3% 15%;
+}
+
+/*
+label {
+  float: left;
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  width: 10em;
+  padding-right: 1em;
+}
+
+input,
+textarea {
+  display: block;
+  margin-bottom: 2em;
+  width: 50%;
+}
+*/
+.vidsize {
+  width: 560px;
+  height: 315px;
+  border: 0;
+}
+
+/*
+#myName,
+#myEmail {
+  width: 40%;
+}
+*/
+
+#mySubmit {
+  margin-left: 12em;
+  width: auto;
+}
+
+table {
+  margin: auto;
+  border: 1px solid #3f2860;
+  width: 90%;
+  align-self: center;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  background-color: #ffffff;
+}
+
+td,
+th {
+  border: 1px solid #3f2860;
+  padding: 5px;
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #dadadd;
+}
+
+caption {
+  margin: 1em;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.table_w_access {
+  display: table;
+}
+
+/* For tablets: */
+@media only screen and (max-width: 1024px) {
+  #fxbox {
+    flex-direction: column;
+  }
+
+  nav {
+    text-align: center;
+    padding: 0px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
+    margin-top: 0px;
+  }
+
+  nav li {
+    border: 2px solid #00005d;
+    padding: 1px;
+    border-radius: 5px;
+    margin: 2px;
+    margin: 0px;
+  }
+}
+
+/* For small mobile phones: */
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: none;
+    font-size: 120%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #navbar {
+    position: relative;
+  }
+
+  #image_rollovers {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  #wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  main {
+    width: auto;
+    border: none;
+  }
+
+  header {
+    background-image: none;
+    background-color: #060004;
+    color: #0095d4;
+    background-size: 100%;
+  }
+
+  li {
+    margin: 20px 0 20px 0;
+  }
+
+  #fxbox {
+    flex-direction: column;
+  }
+
+  nav {
+    order: 0;
+    text-align: center;
+    padding: 0px;
+  }
+
+  nav a {
+    text-decoration: none;
+  }
+
+  nav ul {
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav li {
+    flex: 10;
+    border: 0px solid #00005d;
+    padding: 1px;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  span {
+    font-size: 1.1em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .image_row,
+  .flex3col {
+    flex-direction: column;
+  }
+
+  .image_1,
+  .image_2,
+  .image_3 {
+    padding: 5% 20%;
+  }
+
+  fieldset {
+    margin: 10% 10% 5% 10%;
+  }
+
+  label {
+    float: none;
+    text-align: left;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 3em;
+    width: 100%;
+  }
+
+  .vidsize {
+    min-width: 280px;
+  }
+
+  #myName,
+  #myEmail {
+    width: 90%;
+  }
+
+  #mySubmit {
+    margin-left: 0em;
+  }
+
+  table {
+    margin: auto;
+    padding: 0px;
+  }
+
+  td,
+  th {
+    text-align: center;
+    font-size: 0.6em;
+  }
+
+  caption {
+    font-size: 80%;
+  }
+}
+
+/* For very small mobile phones: */
+@media only screen and (max-width: 414px) {
+  main {
+    margin: 0px;
+    padding: 5px;
+  }
+
+  th,
+  td {
+    width: auto;
+    font-size: 0.5em;
+  }
+}

@@ -1,0 +1,56 @@
+/* Submitted by: James Lee */
+/*      College: Seminole State College of Florida */
+/*       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) */
+/*   Instructor: Professor Rosario */
+/*         Date: December 3, 2021 */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 140%;
+	text-align: center;
+	margin-bottom: .5em;
+}
+.myslider {
+	margin: 0 auto;
+	margin-top: 15px;
+	max-width: 560px;
+}
+#image {
+	height: 315px;
+	margin-bottom: 1em;	
+	margin-left: 10px;
+}
+/* the styles for the carousel */
+.button_panel	{
+	height: 125px;
+	padding: 50px 15px;
+	float: left;
+}
+.button_panel img {
+	width: 25px;
+	height: 25px;
+}
+#display_panel {
+	width: 300px;
+	overflow: hidden;
+	float: left;			
+	height: 125px;
+}
+#image_list {
+	position: relative;	
+	left: 0px;
+    width: 1700px;
+    list-style: none;  
+}
+#image_list li	{
+	float: left;
+	width: 100px;
+}
+#image_list li img	{
+	width: 95px;
+	
+}

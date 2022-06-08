@@ -1,0 +1,53 @@
+/* Submitted by: James Lee */
+/*      College: Seminole State College of Florida */
+/*       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) */
+/*   Instructor: Professor Rosario */
+/*         Date: December 3, 2021 */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+section {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+/*	max-width: 650px; */
+	margin: 0 auto;
+	margin-top: 15px;
+	padding: 15px 25px;	
+	border: 3px solid blue;
+}
+#faqs h1 { 
+	position: relative;
+	font-size: 475%;
+	opacity: .3;
+	color: black;
+}
+#faqs h2 {
+	font-size: 120%;
+	padding: .25em 0 .25em 25px;
+	background: url(images/plus.png) no-repeat left center;
+}
+#faqs h2.minus {
+	background: url(images/minus.png) no-repeat left center;
+}
+#faqs a {
+    color: black;
+    text-decoration: none; 
+}
+#faqs a:hover {
+	color: rgb(44, 241, 143);
+}
+#faqs div {
+	display: none;
+}
+#faqs ul {
+	padding-left: 45px;
+}
+#faqs li {
+	padding-bottom: .25em;
+}
+#faqs p {
+	padding-bottom: .25em;
+	padding-left: 25px;
+}

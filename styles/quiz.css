@@ -1,0 +1,112 @@
+/* Submitted by: James Lee */
+/*      College: Seminole State College of Florida */
+/*       Course: COP 2831 Advanced JavaScript - Final Project (Kissimmee) */
+/*   Instructor: Professor Rosario */
+/*         Date: December 3, 2021 */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.newWrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 15px auto;
+  width: 675px;
+  padding: 0 2em 1em;
+  border: 3px solid blue;
+}
+
+h1 {
+  color: blue;
+}
+
+label {
+  width: 8em;
+  text-align: right;
+}
+
+input {
+  margin-bottom: 0.5em;
+}
+
+button {
+  width: 15em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#car,
+#antenna,
+#ac,
+#drone,
+#trouble,
+#long,
+#sweet,
+#unknown,
+#cattle,
+#boats,
+#citrus,
+#tourism,
+#sugar,
+#allendale,
+#truefact,
+#falsefact {
+  margin-left: 2em;
+}
+
+span {
+  color: black;
+  text-shadow: none;
+  margin-left: 0.5em;
+}
+
+#quiz_timer,
+#name1,
+#visit1 {
+  color: red;
+}
+
+.ui-icon,
+.ui-widget-content .ui-icon {
+  background-image: url("images/ui-icons_444444_256x240.png");
+}
+
+#join {
+  width: 7.5em;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  font-size: 1em;
+}
+
+.ui-draggable,
+.ui-droppable {
+  background-position: top;
+}
+
+.ui-menu {
+  width: 160px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* For small mobile phones: */
+@media only screen and (max-width: 768px) {
+  .newWrapper {
+    width: auto;
+  }
+
+  #navbar ul li {
+    text-align: center;
+  }
+}
